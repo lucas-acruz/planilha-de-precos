@@ -39,7 +39,7 @@ def pesquisa_produto():
     return 'https://www.zoom.com.br/search?q=' + produto
 
 if __name__ == "__main__":
-    nome_do_arquivo_excel = 'moveis_da_casa.xlsx'
+    nome_do_arquivo_excel = 'resultado.xlsx'
     url_do_site = pesquisa_produto()
 
     informacoes_produtos = obter_informacoes_do_site(url_do_site)
