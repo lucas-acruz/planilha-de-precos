@@ -46,13 +46,10 @@ if __name__ == "__main__":
     informacoes_produtos = obter_informacoes_do_site(url_do_site)
     
     if informacoes_produtos:
-        # Ordena as informações dos produtos com base nos preços
         informacoes_produtos_ordenadas = sorted(informacoes_produtos, key=lambda x: x[1])
         
-        # Seleciona os 5 menores preços
         cinco_menores_precos = informacoes_produtos_ordenadas[:5]
         
-        # Salva as informações dos 5 menores preços em um arquivo Excel
         salva_em_excel(cinco_menores_precos, nome_do_arquivo_excel)
         
         print(f"As informações dos 5 produtos com os menores preços foram salvas em '{nome_do_arquivo_excel}'.")
